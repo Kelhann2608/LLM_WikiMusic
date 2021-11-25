@@ -15,9 +15,6 @@ const Event = () => {
       .then((res) => setEvents(res.data));
   }, []);
 
-  useEffect(() => {
-    console.log(typeof events[0].datetime);
-  }, [events]);
   return (
     <div className="eventContainer">
       {events &&
