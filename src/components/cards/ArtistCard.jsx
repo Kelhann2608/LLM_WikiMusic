@@ -5,7 +5,7 @@ import './artistCard.css';
 import { useEffect, useState } from 'react';
 import axios from "axios";
 
-const ArtistCard = ({name, setChosenTag, img, tag}) => {
+const ArtistCard = ({name, img, tag}) => {
    const [picture, setPicture] = useState()
    console.log(name, 'NAMEEEE')
     const apiKey = "api_key=edabdc8efa6ff44658d08a93a343cf21"
@@ -22,8 +22,8 @@ console.log(img)
    
     return (
         <Link to={`/genre/${tag}/artist/${name}`}>
-            <div className="artist-card" onClick={() => {setChosenTag(name)}}>
-                <img src={picture} />
+            <div className="artist-card">
+                <img src={picture}/>
                 <h4>{name}</h4>
             </div>
         </Link>
