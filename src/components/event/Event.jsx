@@ -4,6 +4,9 @@ import { useParams } from "react-router-dom";
 
 import EventCard from "../cards/EventCard";
 
+import './event.css'
+
+
 const Event = () => {
   const { artistName } = useParams();
   const [events, setEvents] = useState([]);
