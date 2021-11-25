@@ -3,3 +3,25 @@
     padding: 0;
     text-align: center;
   }
+
+  .tracks-list {
+    list-style: none;
+    color: white;
+  }
+
+  .tracks-list li {
+    margin: 5px 0;
+    transition: transform 0.3s;
+  }
+
+  .tracks {
+    margin: 5px 0;
+    transition: transform 0.3s;
+  }
+
+  .tracks:hover {
+    cursor: pointer;
+    text-decoration: underline;
+    transform: scale(1.1);
+  }
+

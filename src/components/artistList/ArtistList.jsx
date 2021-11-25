@@ -17,7 +17,7 @@ const ArtistList = () => {
         .get(`http://ws.audioscrobbler.com/2.0/?method=tag.gettopartists&tag=${tag}&${apiKey}&format=json`)
         .then((res) => setTopArtist(res.data.topartists.artist) )
         .catch((err)=> console.log(err))
-    },[]);
+    },[tag, setTopArtist]);
 
     
 

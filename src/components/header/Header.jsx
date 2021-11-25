@@ -9,7 +9,7 @@ const Header = () => {
 
     return (
         <div className="header" >
-            <img className="logoNavbar" src={logoNav}/>
+            <img className="logoNavbar" src={logoNav} alt="" />
         
         </div>
     )

@@ -11,30 +11,27 @@ const Artist = () => {
   const [artist, setArtist] = useState();
   const [albumList, setAlbumList] = useState();
   const [albumSelected, setAlbumSelected] = useState();
+  const [isHidden, setIsHidden] = useState(true);
 
   useEffect(() => {
     axios
-      .get(
-        `https://www.theaudiodb.com/api/v1/json/1/search.php?s=${artistName}`
-      )
+      .get(`https://www.theaudiodb.com/api/v1/json/1/search.php?s=${artistName}`)
       .then((res) => res.data.artists[0])
       .then((data) => setArtist(data));
-  }, []);
+  }, [artistName, setArtist]);
 
   useEffect(() => {
     artist &&
       axios
-        .get(
-          `https://theaudiodb.com/api/v1/json/1/album.php?i=${artist.idArtist}`
-        )
+        .get(`https://theaudiodb.com/api/v1/json/1/album.php?i=${artist.idArtist}`)
         .then((res) => res.data)
         .then((data) => setAlbumList(data.album));
-  }, [artist]);
+  }, [artist, setAlbumList]);
 
   return (
-    <div className="background">
-      {artist && (
-        <div>
+    <div className='artist-container'>
+      {artist && 
+        <div className='album-details'>
           <div className="artistInfos">
             {artistName}
             <div className="police">
@@ -61,7 +58,10 @@ const Artist = () => {
                   <div
                     className="albumContainer"
                     key={index}
-                    onClick={() => setAlbumSelected(album.idAlbum)}
+                    onClick={() => {
+                      setAlbumSelected(album.idAlbum);
+                      setIsHidden(false);
+                    }}
                   >
                     <h3 className="albumTitle">{album.strAlbum}</h3>
                     <div
@@ -73,8 +73,10 @@ const Artist = () => {
           </div>
           <Event />
         </div>
-      )}
-      {albumSelected && <Track albumSelected={albumSelected} />}
+      }
+      <div className={isHidden ? 'tracks-details' : 'tracks-details-is-hidden'}>
+        {albumSelected && <Track albumSelected={albumSelected} />}
+      </div>
     </div>
   );
 };

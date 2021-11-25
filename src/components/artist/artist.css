@@ -8,6 +8,26 @@
   background-color: blue;
 }
 
+.artist-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.tracks-details {
+  display: hidden;
+  width: 45vw;
+}
+
+.tracks-details-is-hidden {
+  display: block;
+  width: 45vw;
+}
+
+.album-details {
+  width: 45vw;
+}
+
 .police {
   color: white;
 }
