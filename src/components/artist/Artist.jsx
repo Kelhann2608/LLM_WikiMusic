@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 import { useParams } from "react-router-dom";
 import Track from "../track/Track";
+import Event from "../event/Event";
 
 const Artist = () => {
   const { artistName } = useParams();
@@ -48,20 +49,29 @@ const Artist = () => {
               </div>
             </div>
           </div>
+          <h2 className="sectionTitle">Discography</h2>
           <div className="albums">
             {albumList &&
-              albumList.map((album, index) => (
-                <div
-                  key={index}
-                  onClick={() => {
-                    setAlbumSelected(album.idAlbum);
-                    setIsHidden(false);
-                  }}
-                >
-                  {album.strAlbum}
-                </div>
-              ))}
+              albumList
+                .filter((album) => album.strAlbumThumb)
+                .map((album, index) => (
+                  <div
+                    className="albumContainer"
+                    key={index}
+                    onClick={() => {
+                      setAlbumSelected(album.idAlbum);
+                      setIsHidden(false);
+                    }}
+                  >
+                    <h3 className="albumTitle">{album.strAlbum}</h3>
+                    <div
+                      className="albumBg"
+                      style={{ backgroundImage: `url(${album.strAlbumThumb})` }}
+                    ></div>
+                  </div>
+                ))}
           </div>
+          <Event />
         </div>
       }
       <div className={isHidden ? 'tracks-details' : 'tracks-details-is-hidden'}>
