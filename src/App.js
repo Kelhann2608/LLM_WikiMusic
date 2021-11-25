@@ -14,7 +14,7 @@ function App() {
         <Routes>
           <Route exact path="/" element={<Home />} />
           <Route path="/genre/:tag" element={<ArtistList />} />
-          <Route path="genre/:tag/artist/:artistName" element={<Artist />} />
+          <Route path="genre/:tag/artist/:artistId" element={<Artist />} />
           <Route
             path="genre/:tag/artist/:artistName/track/:trackName"
             element={<Track />}
