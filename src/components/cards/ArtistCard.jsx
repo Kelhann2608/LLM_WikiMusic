@@ -1,19 +1,15 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import './artistCard.css';
+import "./artistCard.css";
 
-const ArtistCard = ({name, setChosenTag}) => {
-
-    // link ver "/genre/:tag />
-
-    return (
-        <Link to={`/genre/${name}`}>
-            <div className="artist-card" onClick={() => {setChosenTag(name)}}>
-                <h4>{name}</h4>
-            </div>
-        </Link>
-
-    )
+const ArtistCard = ({ name, tag }) => {
+  return (
+    <Link to={`/genre/${tag}/artist/${name}`}>
+      <div className="artist-card">
+        <h4>{name}</h4>
+      </div>
+    </Link>
+  );
 };
 
 export default ArtistCard;
