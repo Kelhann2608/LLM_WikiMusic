@@ -2,6 +2,7 @@ import "./artist.css";
 import { useState, useEffect } from "react";
 import axios from "axios";
 import { useParams } from "react-router-dom";
+import Track from "../track/Track";
 
 const Artist = () => {
   const { artistName } = useParams();
@@ -9,7 +10,6 @@ const Artist = () => {
   const [artist, setArtist] = useState();
   const [albumList, setAlbumList] = useState();
   const [albumSelected, setAlbumSelected] = useState();
-  console.log(albumSelected);
 
   useEffect(() => {
     axios
@@ -18,7 +18,7 @@ const Artist = () => {
       )
       .then((res) => res.data.artists[0])
       .then((data) => setArtist(data));
-  }, []);
+  }, [setArtist]);
 
   useEffect(() => {
     artist &&
@@ -28,11 +28,11 @@ const Artist = () => {
         )
         .then((res) => res.data)
         .then((data) => setAlbumList(data.album));
-  }, [artist]);
+  }, [artist, setAlbumList]);
 
   return (
     <div className="background">
-      {artist && (
+      {artist && 
         <div>
           <div className="artistInfos">
             {artistName}
@@ -63,8 +63,8 @@ const Artist = () => {
               ))}
           </div>
         </div>
-      )}
-      <div className="tracksDiv"></div>
+      }
+      {albumSelected && <Track albumSelected={albumSelected} />}
     </div>
   );
 };
