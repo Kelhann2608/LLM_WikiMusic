@@ -1,7 +1,6 @@
 import "./artist.css";
 import {useState, useEffect} from "react";
 import axios from "axios"
-import ArtistList from "../artistList/ArtistList";
 import { useParams } from 'react-router-dom';
 
 
@@ -16,8 +15,8 @@ const Artist = () => {
       .get(`https://www.theaudiodb.com/api/v1/json/1/search.php?s=${artistName}`)      
       .then((res) => (res.data.artists[0]))
       .then((data) => setArtist(data))
-      .then(axios.get(`https://theaudiodb.com/api/v1/json/1/album.php?i=${artist.idArtist}`)
-      .then((res)=> console.log(res.data)))
+    //   .then(axios.get(`https://theaudiodb.com/api/v1/json/1/album.php?i=${artist.idArtist}`)
+    //   .then((res)=> console.log(res.data)))
   },[]);
 
 
