@@ -1,36 +1,54 @@
 import "./artist.css";
-import React, { useState, useEffect } from "react";
-import TrackCard from "../cards/TrackCard";
-import axios from "axios";
+import {useState, useEffect} from "react";
+import axios from "axios"
+import { useParams } from 'react-router-dom';
+
 
 const Artist = () => {
-  const artistName = "Coldplay";
-  const [trackList, setTrackList] = useState();
-  console.log(trackList);
+    const {artistName} = useParams();
 
-  useEffect(() => {
+    const [artist, setArtist] = useState();
+    console.log(artist);
+
+      useEffect(() => {
     axios
-      .get(
-        `https://ws.audioscrobbler.com/2.0/?method=artist.gettoptracks&artist=${artistName}&api_key=edabdc8efa6ff44658d08a93a343cf21&format=json`
-      )
-      .then((res) => setTrackList(res.data.toptracks.track));
-  }, []);
+      .get(`https://www.theaudiodb.com/api/v1/json/1/search.php?s=${artistName}`)      
+      .then((res) => (res.data.artists[0]))
+      .then((data) => setArtist(data))
+    //   .then(axios.get(`https://theaudiodb.com/api/v1/json/1/album.php?i=${artist.idArtist}`)
+    //   .then((res)=> console.log(res.data)))
+  },[]);
 
-  // useEffect(() => {
-  //   axios
-  //     .get(
-  //       "https://ws.audioscrobbler.com/2.0/?method=artist.getinfo&artist=Cher&api_key=edabdc8efa6ff44658d08a93a343cf21&format=json"
-  //     )
-  //     .then((res) => console.log(res))
-  //     .then((data) => console.log(data));
-  // });
-  return (
-    <div>
-      <ul>
-        {trackList && trackList.map((track) => <TrackCard name={track.name} />)}
-      </ul>
-    </div>
-  );
+
+
+    return( 
+        <div className='background'>
+        {artist && 
+        <div>
+            <div>{artistName}
+                <div className='police'> 
+                    <div>{artist.strArtist}</div>
+                    <div>{artist.idArtist}</div>
+                    <div>{artist.intBornYear}</div>
+                    <div>{artist.strCountry}</div>
+                    <div>{artist.strFacebook}</div>
+                    <div>{artist.strTwitter}</div>
+                    <div>{artist.strBiographyEN}</div>
+                    <div>{artist.strWebsite}</div>
+                    <div>{artist.strGenre}</div>
+                    <div><img src={artist.strArtistThumb} alt={artist.strArtist} /></div>
+             </div>   
+                </div>
+
+
+
+
+            
+        </div>}
+        </div>
+    )
+
+  
 };
 
 export default Artist;
