@@ -17,15 +17,19 @@ const ArtistCard = ({ name, tag }) => {
         })
         .catch((err) => console.log(err));
   }, [name]);
+  if (picture) {
+    return (
+      <Link to={`/genre/${tag}/artist/${name}`}>
+        <div className="artist-card">
+          <img src={picture} alt="" />
+          <h4>{name}</h4>
+        </div>
+      </Link>
+    );
+  }
 
-  return (
-    <Link to={`/genre/${tag}/artist/${name}`}>
-      <div className="artist-card">
-        <img src={picture} alt="" />
-        <h4>{name}</h4>
-      </div>
-    </Link>
-  );
+  else return null
+  
 };
 
 export default ArtistCard;
