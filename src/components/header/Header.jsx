@@ -1,7 +1,7 @@
 import React from "react";
 import './header.css';
 import logoNav from '../../assets/logo-llm.png';
-import logo from '../../assets/logo-llm2.png';
+// import logo from '../../assets/logo-llm2.png';
 
 
 

@@ -15,8 +15,9 @@ function App() {
       <Routes>
         <Route exact path="/" element={<Home />} />
         <Route path="/genre/:tag" element={<ArtistList />} />
-        {/* <Route path="/artist/:artistName" element={<Artist />} />
-        <Route path="/tracks/:trackName" element={<Track />} /> */}
+        <Route path="genre/:tag/artist/:artistName" element={<Artist />} />
+
+        {/* <Route path="/tracks/:trackName" element={<Track />} /> */} */}
       </Routes>
     </Router>
 
