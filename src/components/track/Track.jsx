@@ -1,20 +1,22 @@
-import './track.css';
-import {useEffect} from 'react';
+import {useEffect, useState} from 'react';
 import axios from 'axios';
-import TrackCard from '../cards/TrackCard';
+import './track.css';
 
 const Track = ({albumSelected}) => {
-    
+    const [tracksList, setTracksList] = useState();
     useEffect(() => {
         albumSelected && axios
-            .get(`theaudiodb.com/api/v1/json/{APIKEY}/track.php?m=${albumSelected}`)
-            .then((res) => console.log(res.data))
-    }, [albumSelected]);
+            .get(`https://theaudiodb.com/api/v1/json/1/track.php?m=${albumSelected}`)
+            .then((res) => (res.data))
+            .then((data) => setTracksList(data.track))
+    }, [albumSelected, setTracksList]);
 
     return (
-        <div>
-            <h1>Tracks list below</h1>
-            <TrackCard />
+        <div className="tracks-div">
+            <h1>{tracksList && tracksList[0].strAlbum}</h1>
+            <ul className="tracks-list">
+            {tracksList && tracksList.map((track, index) => <li className='tracks' key={index}>{track.strTrack}</li>)}
+            </ul>
         </div>
     )
 }

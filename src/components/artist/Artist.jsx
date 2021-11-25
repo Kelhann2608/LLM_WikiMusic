@@ -10,30 +10,27 @@ const Artist = () => {
   const [artist, setArtist] = useState();
   const [albumList, setAlbumList] = useState();
   const [albumSelected, setAlbumSelected] = useState();
+  const [isHidden, setIsHidden] = useState(true);
 
   useEffect(() => {
     axios
-      .get(
-        `https://www.theaudiodb.com/api/v1/json/1/search.php?s=${artistName}`
-      )
+      .get(`https://www.theaudiodb.com/api/v1/json/1/search.php?s=${artistName}`)
       .then((res) => res.data.artists[0])
       .then((data) => setArtist(data));
-  }, [setArtist]);
+  }, [artistName, setArtist]);
 
   useEffect(() => {
     artist &&
       axios
-        .get(
-          `https://theaudiodb.com/api/v1/json/1/album.php?i=${artist.idArtist}`
-        )
+        .get(`https://theaudiodb.com/api/v1/json/1/album.php?i=${artist.idArtist}`)
         .then((res) => res.data)
         .then((data) => setAlbumList(data.album));
   }, [artist, setAlbumList]);
 
   return (
-    <div className="background">
+    <div className='artist-container'>
       {artist && 
-        <div>
+        <div className='album-details'>
           <div className="artistInfos">
             {artistName}
             <div className="police">
@@ -56,7 +53,10 @@ const Artist = () => {
               albumList.map((album, index) => (
                 <div
                   key={index}
-                  onClick={() => setAlbumSelected(album.idAlbum)}
+                  onClick={() => {
+                    setAlbumSelected(album.idAlbum);
+                    setIsHidden(false);
+                  }}
                 >
                   {album.strAlbum}
                 </div>
@@ -64,7 +64,9 @@ const Artist = () => {
           </div>
         </div>
       }
-      {albumSelected && <Track albumSelected={albumSelected} />}
+      <div className={isHidden ? 'tracks-details' : 'tracks-details-is-hidden'}>
+        {albumSelected && <Track albumSelected={albumSelected} />}
+      </div>
     </div>
   );
 };

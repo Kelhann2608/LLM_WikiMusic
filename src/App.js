@@ -3,7 +3,6 @@ import Header from "./components/header/Header";
 import Home from "./components/home/Home";
 import ArtistList from "./components/artistList/ArtistList";
 import Artist from "./components/artist/Artist";
-import Track from "./components/track/Track";
 import "./app.css";
 
 function App() {
