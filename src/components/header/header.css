@@ -1,0 +1,10 @@
+* {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+  }
+
+  .logoNavbar {
+    width: 15rem;
+    height: 15rem;
+  }

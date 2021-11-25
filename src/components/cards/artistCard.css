@@ -1,0 +1,29 @@
+.artist-card {
+    height: 15vw;
+    width: 10vw;
+    border-radius: 10px;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2));
+    background-size:  100% 100%;
+    box-shadow: 5px 5px 5px black;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    margin: 2vw;
+    text-transform: uppercase;
+    color: white;
+    text-shadow: 2px 2px 2px black;
+    font-weight: bold;
+    transition: transform 0.3s;
+    font-size: 1.2rem;
+}
+
+.artist-card h4 {
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+    padding: 2px;
+    
+}
+
+.artist-card:hover {
+    transform: scale(1.05);
+    cursor: pointer;
+}
