@@ -9,15 +9,14 @@ import "./app.css";
 function App() {
   return (
     <div className="App">
-      
-    <Router>
-      <Header />
-      <Routes>
-        <Route exact path="/" element={<Home />} />
-        <Route path="/genre/:tag" element={<ArtistList />} />
-        <Route path="genre/:tag/artist/:artistName" element={<Artist />} />
-      </Routes>
-    </Router>
+      <Router>
+        <Header />
+        <Routes>
+          <Route exact path="/" element={<Home />} />
+          <Route path="/genre/:tag" element={<ArtistList />} />
+          <Route path="genre/:tag/artist/:artistName" element={<Artist />} />
+        </Routes>
+      </Router>
 
       <h1>Elle, elle aime ! dans app</h1>
     </div>
