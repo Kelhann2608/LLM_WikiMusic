@@ -7,7 +7,7 @@ import axios from "axios";
 
 const ArtistCard = ({ name, tag }) => {
   const [picture, setPicture] = useState();
-  const [artistID, setArtistID] = useState();
+  
 
   const apiKey = "api_key=edabdc8efa6ff44658d08a93a343cf21";
   //setPicture(res.data.artist.image[1]['#text'])
@@ -17,7 +17,6 @@ const ArtistCard = ({ name, tag }) => {
         .get(`https://theaudiodb.com/api/v1/json/1/search.php?s=${name}`)
         .then((res) => {
           setPicture(res.data.artists[0].strArtistBanner);
-          setArtistID(res.data.artists[0].idArtist);
         })
         .catch((err) => console.log(err));
   }, []);
@@ -25,7 +24,7 @@ const ArtistCard = ({ name, tag }) => {
   // link ver "/genre/:tag />
 
   return (
-    <Link to={`/genre/${tag}/artist/${artistID}`}>
+    <Link to={`/genre/${tag}/artist/${name}`}>
       <div className="artist-card">
         <img src={picture} />
         <h4>{name}</h4>
