@@ -114,6 +114,7 @@ text-align: center;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
+  position: relative;
 }
 
 .albumContainer {
@@ -155,4 +156,33 @@ text-align: center;
 
 @media screen and (min-width: 450px) and (max-width: 768px) {
  
+}
+
+.next {
+  padding: 10px 0;
+  width: 8rem;
+  font-size: 1.1rem;
+  margin: 5rem 1rem 5rem 1rem;
+  border-radius: 10px;
+  background-color: white;
+  color: black;
+  font-weight: bold;
+  border: black solid 2px;
+  transition: transform 0.5s;
+  position: absolute;
+  bottom: 0;
+}
+
+.next:hover {
+  background-color: black;
+  color: white;
+  transform: scale(1.2);
+}
+
+.next.left {
+  left: 0;
+}
+
+.next.right {
+  right: 0;
 }

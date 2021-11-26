@@ -15,6 +15,8 @@ const Artist = () => {
   const [albumSelected, setAlbumSelected] = useState();
   const [isHidden, setIsHidden] = useState(true);
   const bioParagraph = artist ? artist.strBiographyEN.split("\n\n") : [];
+  const [firstNext, setFirstNext] = useState(0);
+  const [secondNext, setSecondNext] = useState(10);
 
   useEffect(() => {
     axios
@@ -36,6 +38,22 @@ const Artist = () => {
   }, [artist, setAlbumList]);
 
   // console.log(artist.strFacebook)
+
+  const handlePrevClick = () => {
+    if (firstNext > 0)
+    {
+          setFirstNext(firstNext - 10);
+    setSecondNext(secondNext - 10);
+    }
+  }
+
+  const handleNextClick = () => {
+    console.log(albumList.length)
+    if (secondNext < albumList.length - 5) {
+      setFirstNext(firstNext + 10);
+      setSecondNext(secondNext + 10);
+    }
+  }
 
   return (
     <div className="artist-container">
@@ -122,6 +140,7 @@ const Artist = () => {
             {albumList &&
               albumList
                 .filter((album) => album.strAlbumThumb)
+                .slice(firstNext, secondNext)
                 .map((album, index) => (
                   <div
                     className="albumContainer"
@@ -138,6 +157,39 @@ const Artist = () => {
                     ></div>
                   </div>
                 ))}
+
+
+
+
+                {albumList &&
+                 (<button
+                    type="button"
+                    className="next left"
+                    onClick={() => {
+                      handlePrevClick()
+                    }}
+                  >
+                    Previous 10
+                  </button>
+                 
+                )}
+
+                 
+              {albumList &&  
+                  <button
+                    type="button"
+                    className="next right"
+                    onClick={() => {
+                      handleNextClick() 
+                    }} 
+                  >
+                    Next 10
+                  </button>
+                }
+
+        
+
+
           </div>
           <Event />
         </div>

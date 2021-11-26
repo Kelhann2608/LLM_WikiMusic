@@ -5,6 +5,18 @@
     left: 40.5vw;
 }
 
+.inputSearch {
+  position: relative;
+  width: fit-content;
+  margin: auto;
+}
+
+.inputSearch label {
+  position:absolute;
+  left: 5px;
+  bottom: -3px;
+}
+
 @keyframes vinylspin {
     from {
       transform: rotate(0deg);
