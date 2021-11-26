@@ -23,12 +23,13 @@ const Home = () => {
             setTags(data);
             setLoading(false);
           }),
-      1000
+      500
     );
   }, []);
 
   return (
     <>
+<<<<<<< HEAD
      <div className="inputSearch"> <label ><img src={loupeSearch} width="18px"/></label>
         <input
           className="searchInput"
@@ -38,6 +39,9 @@ const Home = () => {
           onChange={(e) => setSearchTag(e.target.value.toLowerCase())}
         /></div>
       {loading ? <div className="vinylContainer"><img className="vinyl" src={vinyl} height="300" width="300" /></div> : null}
+=======
+      {loading ? <div className="vinylContainer"><img className="vinyl" src={vinyl} alt="" height="300" width="300" /></div> : null}
+>>>>>>> dev
       <div className="cardsContainer">
         {tags &&
           tags.filter((tag) => tag.name.toLowerCase().includes(searchTag)).map((tag, index) => <TagCard key={index} name={tag.name} />)}

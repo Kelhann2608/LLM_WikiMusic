@@ -58,7 +58,7 @@ const Artist = () => {
   return (
     <div className="artist-container">
       {artist && (
-        <div className="album-details">
+        <div className={isHidden ? "artist-details" : "artist-details-is-hidden"}>
           <div className="artistInfos">
             <div className="artistInfos-all">
               <img
@@ -124,12 +124,14 @@ const Artist = () => {
                     ""
                   )}
                 </div>
+                <div className="paragraph">
                 {bioParagraph &&
                   bioParagraph.slice(0, 3).map((p, index) => (
                     <p className="bioParagraph" key={index}>
                       {p}
                     </p>
                   ))}
+                </div>
               </div>
             </div>
           </div>

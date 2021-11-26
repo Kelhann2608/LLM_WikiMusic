@@ -26,7 +26,7 @@ const ArtistList = () => {
             setLoading(false);
           })
           .catch((err) => console.log(err)),
-      1000
+      500
     );
   }, [tag, setTopArtist]);
 
