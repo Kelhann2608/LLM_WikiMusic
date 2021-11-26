@@ -1,0 +1,25 @@
+.card {
+    height: 10vw;
+    width: 15vw;
+    border-radius: 10px;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('https://images.pexels.com/photos/196652/pexels-photo-196652.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w');
+    background-size:  100% 100%;
+    box-shadow: 5px 5px 5px black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 2vw;
+    text-transform: uppercase;
+    color: white;
+    text-shadow: 2px 2px 2px black;
+    font-weight: bold;
+    transition: transform 0.3s;
+    font-size: 1.2rem;
+    
+}
+
+.card:hover {
+    transform: scale(1.05);
+    cursor: pointer;
+}

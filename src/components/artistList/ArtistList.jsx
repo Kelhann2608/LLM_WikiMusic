@@ -24,7 +24,7 @@ const ArtistList = () => {
 
 
     return (
-        <div>
+        <div className="artistListContainer">
             {topArtist && topArtist.map((el, idx) => <ArtistCard key={idx} name={el.name} tag={tag}/>) }
         </div>
     )

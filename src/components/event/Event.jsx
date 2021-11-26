@@ -4,6 +4,9 @@ import { useParams } from "react-router-dom";
 
 import EventCard from "../cards/EventCard";
 
+import './event.css'
+
+
 const Event = () => {
   const { artistName } = useParams();
   const [events, setEvents] = useState([]);
@@ -13,7 +16,7 @@ const Event = () => {
         `https://rest.bandsintown.com/artists/${artistName}/events/?app_id=2c2ac4752a524d47b20afcf2dc1e9a00`
       )
       .then((res) => setEvents(res.data));
-  }, []);
+  }, [artistName]);
 
   return (
     <div className="eventContainer">

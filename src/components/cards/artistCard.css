@@ -7,7 +7,7 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: flex-end;
+    align-items: center;
     margin: 2vw;
     text-transform: uppercase;
     color: white;
@@ -26,4 +26,8 @@
 .artist-card:hover {
     transform: scale(1.05);
     cursor: pointer;
+}
+
+.artist-card img {
+    width: 100%;
 }
