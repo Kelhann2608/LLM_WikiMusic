@@ -61,7 +61,7 @@ const Track = ({albumSelected, artistName}) => {
                         width="25vw"
                         height="28vh"
                     />) 
-                    : audioPlay ? <Lottie options={defaultOptions} width="14vw" height="14vw" />
+                    : audioPlay && audio ? <Lottie options={defaultOptions} width="14vw" height="14vw" />
                     : (<h1 className="video-clip-title">Video Clips</h1>)
                     }
                 <h3>{videoPlaying && !audioPlay && videoPlaying}</h3>
