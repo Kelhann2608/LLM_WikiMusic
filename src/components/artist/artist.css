@@ -4,15 +4,17 @@ padding: 0;
 text-align: center;
 }
 
-.container-artist {
+.artist-container {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 95vw;
 }
 
 .artistInfos {
   display: inline;
   flex-direction: column;
-  background-color: blueviolet;
 }
 
 .picture-img {
@@ -21,13 +23,15 @@ text-align: center;
   margin: 20px;
 }
 .artistInfos-infos {
-  padding: 45px
+  padding: 45px;
+  border-radius: 10px;
 }
 
 .name-artist {
   font-size: 6rem;
   margin-top: -50px;
   margin-bottom: 20px;
+  color: #ff751f;
 }
 .artistInfos-social {
   display: flex;
@@ -44,16 +48,9 @@ text-align: center;
   margin: 15px;
 }
 
-
-.artist-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
 .tracks-details {
   display: hidden;
-  width: 45vw;
+  width: 0;
 }
 
 .tracks-details-is-hidden {
@@ -93,8 +90,13 @@ text-align: center;
   }
 }
 
-.album-details {
+.artist-details {
+  width: 90vw;
+}
+
+.artist-details-is-hidden {
   width: 45vw;
+  margin-left: -45vw;
 }
 
 .police {
