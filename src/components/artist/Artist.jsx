@@ -37,6 +37,7 @@ const Artist = () => {
   return (
     <div className='artist-container'>
       {artist && 
+      <>
         <div className='album-details'>
           <div className="artistInfos"> 
               <div className="artistInfos-all">
@@ -78,11 +79,11 @@ const Artist = () => {
                   </div>
                 ))}
           </div>
-          <Event />
         </div>
-      }
+       <Event />
+      </>}
       <div className={isHidden ? 'tracks-details' : 'tracks-details-is-hidden'}>
-        {albumSelected && <Track albumSelected={albumSelected} />}
+        {albumSelected && <Track albumSelected={albumSelected} artistName={artistName} />}
       </div>
     </div>
   );
