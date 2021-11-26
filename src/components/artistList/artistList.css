@@ -1,0 +1,12 @@
+.vinyl {
+    animation: vinylspin infinite 20s linear
+}
+
+@keyframes vinylspin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
