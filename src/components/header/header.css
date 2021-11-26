@@ -7,7 +7,9 @@
   .header {
     display:flex;
     justify-content: left;
+    width: 100vw;
   }
+
   .logoNavbar {
     width: 15rem;
     margin-left: 1rem;
