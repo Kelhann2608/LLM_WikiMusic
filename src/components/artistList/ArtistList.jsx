@@ -32,7 +32,7 @@ const ArtistList = () => {
 
   return (
     <div className="artistListContainer">
-      <div className="inputSearch"> <label ><img src={loupeSearch} width="18px"/></label>
+      <div className="inputSearch"> <label ><img alt="" src={loupeSearch} width="18px"/></label>
         <input
           className="searchInput"
           type="text"
@@ -41,7 +41,7 @@ const ArtistList = () => {
           onChange={(e) => setSearchArtist(e.target.value.toLowerCase())}
         />
         </div>
-      {loading ? <div className="vinylContainer"><img className="vinyl" src={vinyl} height="300" width="300" /></div> : null}
+      {loading ? <div className="vinylContainer"><img className="vinyl" src={vinyl} alt="" height="300" width="300" /></div> : null}
       {topArtist &&
         topArtist.filter((artist) => artist.name.toLowerCase().includes(searchArtist)).map((el, idx) => (
           <ArtistCard key={idx} name={el.name} tag={tag} />

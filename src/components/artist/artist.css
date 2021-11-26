@@ -110,7 +110,9 @@ text-align: center;
 .sectionTitle {
   text-align: center;
   margin: 5vh;
+  font-size: 3rem;
   font-family: 'Permanent Marker', cursive;
+  clear: both;
 }
 
 .albums {
@@ -124,7 +126,7 @@ text-align: center;
 
 .albumContainer {
   width: 150px;
-  height: 180px;
+  height: 210px;
   margin: 10px;
   display: flex;
   flex-direction: column;

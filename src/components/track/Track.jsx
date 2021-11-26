@@ -45,8 +45,6 @@ const Track = ({albumSelected, artistName}) => {
             .then((res) => res.data)
             .then((data) => setVideoList(data.mvids))
     }, [tracksList, setVideoList]);
-    videoList && console.log(videoList[0].strMusicVid)
-    videoUrl && console.log(videoUrl);
 
     return (
         <div className="tracks-div">

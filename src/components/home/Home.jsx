@@ -32,7 +32,7 @@ const Home = () => {
       <div className="inputSearch">
         {" "}
         <label>
-          <img src={loupeSearch} width="20px" />
+          <img src={loupeSearch} alt="" width="20px" />
         </label>
         <input
           className="searchInput"
@@ -44,7 +44,7 @@ const Home = () => {
       </div>
       {loading ? (
         <div className="vinylContainer">
-          <img className="vinyl" src={vinyl} height="300" width="300" />
+          <img className="vinyl" src={vinyl} alt="" height="300" width="300" />
         </div>
       ) : null}
       <div className="cardsContainer">
