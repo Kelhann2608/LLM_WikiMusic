@@ -23,3 +23,20 @@
     transform: scale(1.05);
     cursor: pointer;
 }
+
+@media screen and (max-width: 450px) {
+    .eventCard {
+      background: linear-gradient(
+        0deg,
+        rgba(0, 0, 0, 0.2),
+        rgba(0, 0, 0, 0.2)
+      ) !important;
+      width: 100% !important;
+    }
+  }
+  
+  @media screen and (min-width: 450px) and (max-width: 768px) {
+    .eventCard {
+      font-size: 0.7rem !important;
+    }
+  }
