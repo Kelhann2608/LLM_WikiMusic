@@ -4,30 +4,40 @@ import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import axios from "axios";
 import ArtistCard from "../cards/ArtistCard";
+import vinyl from "../../assets/vinyl.png";
 
 const ArtistList = () => {
-    const apiKey = "api_key=edabdc8efa6ff44658d08a93a343cf21"
-    const [topArtist, setTopArtist] = useState();
-    const { tag } = useParams();
-    
-    // 
-    useEffect(() => {
+  const apiKey = "api_key=edabdc8efa6ff44658d08a93a343cf21";
+  const [topArtist, setTopArtist] = useState();
+  const { tag } = useParams();
+  const [loading, setLoading] = useState(true);
 
+  //
+  useEffect(() => {
+    setTimeout(
+      () =>
         axios
-        .get(`http://ws.audioscrobbler.com/2.0/?method=tag.gettopartists&tag=${tag}&${apiKey}&format=json`)
-        .then((res) => setTopArtist(res.data.topartists.artist) )
-        .catch((err)=> console.log(err))
-    },[tag, setTopArtist]);
+          .get(
+            `http://ws.audioscrobbler.com/2.0/?method=tag.gettopartists&tag=${tag}&${apiKey}&format=json`
+          )
+          .then((res) => {
+            setTopArtist(res.data.topartists.artist);
+            setLoading(false);
+          })
+          .catch((err) => console.log(err)),
+      1000
+    );
+  }, [tag, setTopArtist]);
 
-    
-
-
-
-    return (
-        <div className="artistListContainer">
-            {topArtist && topArtist.map((el, idx) => <ArtistCard key={idx} name={el.name} tag={tag}/>) }
-        </div>
-    )
+  return (
+    <div className="artistListContainer">
+      {loading ? <img class="vinyl" src={vinyl} /> : null}
+      {topArtist &&
+        topArtist.map((el, idx) => (
+          <ArtistCard key={idx} name={el.name} tag={tag} />
+        ))}
+    </div>
+  );
 };
 
 export default ArtistList;
