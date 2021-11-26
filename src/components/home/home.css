@@ -4,7 +4,11 @@
     text-align: center;
   }
 
+  .home-div {
+    width: 100vw;
+  }
   .cardsContainer {
+    width: 100vw;
     display: flex;
     flex-wrap: wrap;
   }
@@ -16,20 +20,31 @@
 
   .inputSearch {
     position: relative;
-    width: fit-content;
     margin: auto;
   }
+
+  .searchInput {
+    width: 25vw;
+    height: 5vh;
+    border-radius: 10px;
+    font-size: 1.1rem;
+    box-shadow: 2px 2px 2px black;
+  }
   
-  .inputSearch label {
+  .inputSearch label img {
     position:absolute;
     left: 5px;
-    bottom: -3px;
+    bottom: 12px;
   }
 
   @media screen and (max-width: 450px) {
     .cardsContainer {
       display: flex;
       flex-direction: column;
+    }
+
+    .searchInput {
+      font-size: 0.8rem;
     }
 
    }

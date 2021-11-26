@@ -28,11 +28,11 @@ const Home = () => {
   }, []);
 
   return (
-    <>
+    <div className="home-div">
       <div className="inputSearch">
         {" "}
         <label>
-          <img src={loupeSearch} width="18px" />
+          <img src={loupeSearch} width="20px" />
         </label>
         <input
           className="searchInput"
@@ -53,7 +53,7 @@ const Home = () => {
             .filter((tag) => tag.name.toLowerCase().includes(searchTag))
             .map((tag, index) => <TagCard key={index} name={tag.name} />)}
       </div>
-    </>
+    </div>
   );
 };
 
