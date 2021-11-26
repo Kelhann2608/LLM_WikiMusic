@@ -29,7 +29,6 @@ const Home = () => {
     <>
       {loading ? <img class="vinyl" src={vinyl} /> : null}
       <div className="cardsContainer">
-        {loading ? <img class="vinyl" src={vinyl} /> : null}
         {tags &&
           tags.map((tag, index) => <TagCard key={index} name={tag.name} />)}
       </div>
