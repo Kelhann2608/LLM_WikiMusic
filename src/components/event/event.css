@@ -1,0 +1,22 @@
+.eventContainer {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+
+@media screen and (max-width: 450px) {
+  .eventContainer {
+   flex-direction: column;
+   flex-wrap: wrap;
+  }
+}
+
+@media screen and (min-width: 450px) and (max-width: 768px) {
+  .eventContainer {
+    font-size: 0.7rem !important;
+  }
+}

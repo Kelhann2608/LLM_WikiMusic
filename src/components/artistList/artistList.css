@@ -1,0 +1,27 @@
+.vinyl {
+    animation: vinylspin infinite 20s linear;
+    position: absolute;
+    top: 30vh;
+    left: 40.5vw;
+}
+
+.inputSearch {
+  position: relative;
+  width: fit-content;
+  margin: auto;
+}
+
+.inputSearch label img{
+  position:absolute;
+  left: 8px;
+  bottom: 10px;
+}
+
+@keyframes vinylspin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }

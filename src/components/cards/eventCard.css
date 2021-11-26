@@ -1,0 +1,43 @@
+.eventCard {
+    height: 10vw;
+    width: 15vw;
+    border-radius: 10px;
+    background-image: url("https://images.unsplash.com/photo-1429962714451-bb934ecdc4ec?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80");
+    background-size: contain;
+    box-shadow: 5px 5px 5px black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 2vw;
+    text-transform: uppercase;
+    color: white;
+    text-shadow: 3px 3px 2px black;
+    font-weight: bold;
+    transition: transform 0.3s;
+    font-size: 1.2rem;
+    
+}
+
+.eventCard:hover {
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
+@media screen and (max-width: 450px) {
+    .eventCard {
+      background: linear-gradient(
+        0deg,
+        rgba(0, 0, 0, 0.2),
+        rgba(0, 0, 0, 0.2)
+      ) !important;
+      width: 100% !important;
+      font-size: 0.7rem !important
+    }
+  }
+  
+  @media screen and (min-width: 450px) and (max-width: 768px) {
+    .eventCard {
+      font-size: 0.7rem !important;
+    }
+  }
