@@ -2,7 +2,8 @@
   display: flex;
   justify-content: space-around;
   margin: 0;
-  padding: 1.2vh;
+  width: 100vw;
+  height: 2.5vw;
   background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2));
 }
 
