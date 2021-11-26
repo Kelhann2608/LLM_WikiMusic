@@ -8,3 +8,11 @@
     display: flex;
     flex-wrap: wrap;
   }
+
+  @media screen and (max-width: 450px) {
+    .cardsContainer {
+      display: flex;
+      flex-direction: column;
+    }
+
+   }
