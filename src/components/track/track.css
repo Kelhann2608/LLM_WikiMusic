@@ -43,11 +43,30 @@
   }
 
   .video-clip-title {
-    height: 15vh;
-    margin: 10vh;
+    height: 10vh;
+    margin: 2vh;
     text-transform: uppercase;
     font-size: 3rem;
     font-weight: 900;
+  }
+
+  .video-clip-title-h3 {
+    height: 8vh;
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+
+  #arrow {
+    
+    width: 40px;
+    height: 80px;
+  }
+
+  .arrow-div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
   }
   
 .video-list-div {
