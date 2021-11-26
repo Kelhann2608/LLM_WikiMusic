@@ -48,7 +48,6 @@ const Artist = () => {
   }
 
   const handleNextClick = () => {
-    console.log(albumList.length)
     if (secondNext < albumList.length - 5) {
       setFirstNext(firstNext + 10);
       setSecondNext(secondNext + 10);
@@ -82,6 +81,7 @@ const Artist = () => {
                             : "https://" + artist.strFacebook
                         }
                         target="_blank"
+                        rel="noreferrer"
                       >
                         {" "}
                         <img src={logoFacebook} alt="logo facebook" />
@@ -98,6 +98,8 @@ const Artist = () => {
                             ? artist.strTwitter
                             : "https://" + artist.strTwitter
                         }
+                        target="_blank"
+                        rel="noreferrer"
                       >
                         {" "}
                         <img src={logoTwitter} alt="logo twitter" />
@@ -115,6 +117,8 @@ const Artist = () => {
                             ? artist.strWebsite
                             : "https://" + artist.strWebsite
                         }
+                        target="_blank"
+                        rel="noreferrer"
                       >
                         {" "}
                         <img src={logoWebsite} alt="logo website" />
@@ -208,6 +212,7 @@ const Artist = () => {
 
 
           </div>
+          <h2 className="sectionTitle">Next events</h2>
           <Event />
         </div>
       )}

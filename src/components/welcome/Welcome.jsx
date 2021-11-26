@@ -19,7 +19,7 @@ const Welcome = () => {
                     Discover our encyclopedia
                 </div>
             </Link>
-            <div  class="music-notes">
+            <div className="music-notes">
             <Lottie width="30vw" options={defaultOptions}/>
             </div>
         </div>
