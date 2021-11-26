@@ -61,7 +61,16 @@ const Track = ({albumSelected, artistName}) => {
                         width="25vw"
                         height="28vh"
                     />) 
-                    : audioPlay && audio ? <Lottie options={defaultOptions} width="14vw" height="14vw" />
+                    : audioPlay && audio ? (<><Lottie options={defaultOptions} width="14vw" height="14vw" />
+                    <ReactPlayer
+                        className="track-video"
+                        url={videoUrl && videoUrl/*  : "https://youtu.be/nh7J0GdmM1M" */}
+                        volume={1}
+                        playing
+                        loop
+                        width="25vw"
+                        height="28vh"
+                    /></>)
                     : (<h1 className="video-clip-title">Video Clips</h1>)
                     }
                 <h3>{videoPlaying && !audioPlay && videoPlaying}</h3>
