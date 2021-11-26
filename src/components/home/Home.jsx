@@ -27,7 +27,7 @@ const Home = () => {
 
   return (
     <>
-      {loading ? <div className="vinylContainer"><img className="vinyl" src={vinyl} height="300" width="300" /></div> : null}
+      {loading ? <div className="vinylContainer"><img className="vinyl" src={vinyl} alt="" height="300" width="300" /></div> : null}
       <div className="cardsContainer">
         {tags &&
           tags.map((tag, index) => <TagCard key={index} name={tag.name} />)}

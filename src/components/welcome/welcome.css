@@ -1,0 +1,21 @@
+* {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.welcome-div {
+    height: 75vh;
+    width: 100vw;
+    background-color: white;
+    background: linear-gradient(0deg, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.3)),url('../../assets/slide_llm.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.logo-big {
+    width: 30vw;
+    height: 30vw;
+    padding: 15vh auto;
+}
