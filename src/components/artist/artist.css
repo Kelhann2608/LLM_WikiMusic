@@ -1,18 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+
 * {
 margin: 0;
 padding: 0;
 text-align: center;
 }
 
-.container-artist {
+.artist-container {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 95vw;
 }
 
 .artistInfos {
   display: inline;
   flex-direction: column;
-  background-color: blueviolet;
 }
 
 .picture-img {
@@ -21,13 +25,17 @@ text-align: center;
   margin: 20px;
 }
 .artistInfos-infos {
-  padding: 45px
+  padding: 45px;
+  border-radius: 10px;
+  background: linear-gradient(0deg, rgba(61, 59, 59, 0.8), rgba(61, 59, 59, 0.8));
 }
 
 .name-artist {
   font-size: 6rem;
   margin-top: -50px;
   margin-bottom: 20px;
+  color: #ff751f;
+  font-family: 'Permanent Marker', cursive;
 }
 .artistInfos-social {
   display: flex;
@@ -44,16 +52,9 @@ text-align: center;
   margin: 15px;
 }
 
-
-.artist-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
 .tracks-details {
   display: hidden;
-  width: 45vw;
+  width: 0;
 }
 
 .tracks-details-is-hidden {
@@ -93,8 +94,13 @@ text-align: center;
   }
 }
 
-.album-details {
+.artist-details {
+  width: 90vw;
+}
+
+.artist-details-is-hidden {
   width: 45vw;
+  margin-left: -45vw;
 }
 
 .police {
@@ -104,6 +110,7 @@ text-align: center;
 .sectionTitle {
   text-align: center;
   margin: 5vh;
+  font-family: 'Permanent Marker', cursive;
 }
 
 .albums {
@@ -112,6 +119,7 @@ text-align: center;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
+  position: relative;
 }
 
 .albumContainer {
@@ -153,4 +161,33 @@ text-align: center;
 
 @media screen and (min-width: 450px) and (max-width: 768px) {
  
+}
+
+.next {
+  padding: 10px 0;
+  width: 8rem;
+  font-size: 1.1rem;
+  margin: 5rem 1rem 5rem 1rem;
+  border-radius: 10px;
+  background-color: white;
+  color: black;
+  font-weight: bold;
+  border: black solid 2px;
+  transition: transform 0.5s;
+  position: absolute;
+  bottom: 0;
+}
+
+.next:hover {
+  background-color: black;
+  color: white;
+  transform: scale(1.2);
+}
+
+.next.left {
+  left: 0;
+}
+
+.next.right {
+  right: 0;
 }
