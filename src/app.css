@@ -8,3 +8,13 @@ body {
   background-image: url('./assets/peakpx.jpg');
   background-size: cover;
 }
+
+.vinylContainer {
+  width:100vw;
+  height:100vh; 
+  background-color:white; 
+  margin-top:-20vh;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}
