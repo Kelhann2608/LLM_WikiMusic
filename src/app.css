@@ -7,19 +7,19 @@
 body {
   background-image: url('./assets/slide_llm.jpg');
   background-size: cover;
-<<<<<<< HEAD
   background-repeat: no-repeat;
   background-attachment: fixed;
-=======
 }
 
 .vinylContainer {
   width:100vw;
   height:100vh; 
-  background-color:white; 
+  background: linear-gradient(0deg, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url('./assets/slide_llm.jpg'); 
   margin-top:-20vh;
   display:flex;
   justify-content: center;
   align-items: center;
->>>>>>> a20b7cc66fb5f956e8726f647a48e36a4a3f9c4f
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
