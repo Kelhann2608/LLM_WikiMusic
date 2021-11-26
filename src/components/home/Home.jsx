@@ -21,7 +21,7 @@ const Home = () => {
             setTags(data);
             setLoading(false);
           }),
-      1000
+      500
     );
   }, []);
 
