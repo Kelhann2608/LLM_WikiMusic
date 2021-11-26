@@ -157,35 +157,52 @@ const Artist = () => {
                     ></div>
                   </div>
                 ))}
-
-
-
-
-                {albumList &&
-                 (<button
-                    type="button"
-                    className="next left"
-                    onClick={() => {
-                      handlePrevClick()
-                    }}
-                  >
-                    Previous 10
-                  </button>
-                 
-                )}
-
-                 
-              {albumList &&  
-                  <button
-                    type="button"
-                    className="next right"
-                    onClick={() => {
-                      handleNextClick() 
-                    }} 
-                  >
-                    Next 10
-                  </button>
-                }
+              {albumList && albumSelected && (
+                <button
+                  type="button"
+                  className="next left"
+                  onClick={() => {
+                    handlePrevClick();
+                  }}
+                >
+                  Previous 10
+                </button>
+              )}
+              {albumList && albumSelected && (
+                <button
+                  type="button"
+                  className="next right"
+                  onClick={() => {
+                    handleNextClick();
+                  }}
+                >
+                  Next 10
+                </button>
+              )}
+            </div>
+          <div>
+            {albumList && !albumSelected && (
+              <button
+                type="button"
+                className="next"
+                onClick={() => {
+                  handlePrevClick();
+                }}
+              >
+                Previous 10
+              </button>
+            )}
+            {albumList && !albumSelected && (
+              <button
+                type="button"
+                className="next"
+                onClick={() => {
+                  handleNextClick();
+                }}
+              >
+                Next 10
+              </button>
+            )}
 
         
 

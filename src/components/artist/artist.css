@@ -167,15 +167,13 @@ text-align: center;
   padding: 10px 0;
   width: 8rem;
   font-size: 1.1rem;
-  margin: 5rem 1rem 5rem 1rem;
+  margin: 0 10vw 10vh 10vw;
   border-radius: 10px;
   background-color: white;
   color: black;
   font-weight: bold;
   border: black solid 2px;
   transition: transform 0.5s;
-  position: absolute;
-  bottom: 0;
 }
 
 .next:hover {
@@ -186,8 +184,14 @@ text-align: center;
 
 .next.left {
   left: 0;
+  position: absolute;
+  margin: 0 2vw 10vh 2vw;
+  bottom: 0;
 }
 
 .next.right {
   right: 0;
+  position: absolute;
+  margin: 0 2vw 10vh 2vw;
+  bottom: 0;
 }
