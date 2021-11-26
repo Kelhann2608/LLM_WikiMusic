@@ -5,6 +5,8 @@
 }
 
 body {
-  background-image: url('./assets/peakpx.jpg');
+  background-image: url('./assets/slide_llm.jpg');
   background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
