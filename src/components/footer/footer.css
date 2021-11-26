@@ -1,0 +1,47 @@
+.footer {
+  display: flex;
+  justify-content: space-around;
+  margin: 0;
+  padding: 1.2vh;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2));
+}
+
+.team {
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+
+.llm {
+  font-size: 1.4rem;
+  font-weight: 600;
+  text-shadow: 2px 2px black;
+  color: orangered;
+}
+
+p {
+  font-size: 1.2rem;
+  align-self: center;
+}
+
+@media screen and (max-width: 1024px) {
+  .footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  p {
+    margin: 5px;
+    padding: 2px;
+    font-size: 1rem;
+  }
+}
+@media screen and (max-width: 500px) {
+  .footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  p {
+    font-size: 0.64rem;
+  }
+}
