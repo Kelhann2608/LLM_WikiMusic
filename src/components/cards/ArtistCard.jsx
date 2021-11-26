@@ -19,7 +19,7 @@ const ArtistCard = ({ name, tag }) => {
   }, [name]);
   if (picture) {
     return (
-      <Link to={`/genre/${tag}/artist/${name}`}>
+      <Link className="links" to={`/genre/${tag}/artist/${name}`}>
         <div className="artist-card">
           <img src={picture} alt="" />
           <h4>{name}</h4>

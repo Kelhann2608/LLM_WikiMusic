@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat&display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -18,14 +20,21 @@
   }
 
   .title-video-playing h3 {
+    font-family: 'Caveat', cursive;
     display: inline-block;
     text-align: left;
-    font-size: 1.5rem;
+    font-size: 2rem;
   }
 
   .title-video-playing {
     display: flex;
     justify-content: center;
+    align-items: center;
+  }
+
+  .audio-play {
+    display: flex;
+    justify-content: start;
     align-items: center;
   }
 
@@ -77,7 +86,13 @@
   }
 
   .album-details h1 {
-    padding: 1vw 0;
+    padding: 0 0 0.3vw 0;
+    width: 30vw;
+    margin: 0 auto 1vw;
+    border: 3px solid white;
+    border-radius: 5px;
+    color: white;
+    text-shadow: 4px 4px 2px black;
   }
 
   .tracks-list {

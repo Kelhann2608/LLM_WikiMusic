@@ -1,6 +1,8 @@
 import {useEffect, useState} from 'react';
 import ReactPlayer from 'react-player';
 import axios from 'axios';
+import Lottie from "react-lottie";
+import animationAudioPlaying from "./animationAudioPlaying.json";
 import './track.css';
 
 const Track = ({albumSelected, artistName}) => {
@@ -9,7 +11,14 @@ const Track = ({albumSelected, artistName}) => {
     const [videoUrl, setVideoUrl] = useState();
     const [videoPlaying, setVideoPlaying] = useState();
     const [selectedTrack, setSelectedTrack] = useState();
+    const [audioPlay, setAudioPlay] = useState(false);
     const [audio, setAudio] = useState();
+    const defaultOptions = {
+        loop: true,
+        autoplay: true,
+        animationData: animationAudioPlaying,
+      };
+    
 
   useEffect(() => {
     selectedTrack &&
@@ -42,21 +51,24 @@ const Track = ({albumSelected, artistName}) => {
     return (
         <div className="tracks-div">
            <div className="video-div">
-               <div className="title-video-playing">
-               {videoUrl ? (<ReactPlayer
+               <div className={audioPlay ? "audio-play" : "title-video-playing"}>
+               {videoUrl && !audioPlay ? (<ReactPlayer
                         className="track-video"
                         url={videoUrl && videoUrl/*  : "https://youtu.be/nh7J0GdmM1M" */}
                         volume={1}
                         playing
                         loop
-                        width="20vw"
-                        height="25vh"
-                    />) : (<h1 className="video-clip-title">Video Clips</h1>)}
-                <h3>{videoPlaying && videoPlaying}</h3>
+                        width="25vw"
+                        height="28vh"
+                    />) 
+                    : audioPlay ? <Lottie options={defaultOptions} width="14vw" height="14vw" />
+                    : (<h1 className="video-clip-title">Video Clips</h1>)
+                    }
+                <h3>{videoPlaying && !audioPlay && videoPlaying}</h3>
                 </div>
                 <div className="video-list-div">
                     <ul className="video-list">
-                        {videoList && videoList.map((video, index) => <li key={index} onClick={() => {setVideoUrl(video.strMusicVid); setVideoPlaying(video.strTrack)}}>{video.strTrack}</li>)}
+                        {videoList && videoList.map((video, index) => <li key={index} onClick={() => {setVideoUrl(video.strMusicVid); setVideoPlaying(video.strTrack); setAudioPlay(false)}}>{video.strTrack}</li>)}
                     </ul>
                 </div>
             
@@ -72,7 +84,7 @@ const Track = ({albumSelected, artistName}) => {
                         onClick={() =>
                             {setSelectedTrack(
                               track.strTrack.toLowerCase().split(" ").join("%20")
-                            ); setTimeout(()=> audio && setVideoUrl(audio), 500)}}
+                            ); setTimeout(()=> audio && setVideoUrl(audio), 500); setAudioPlay(true);}}
                     >
                         {track.strTrack}
                     </li>)}

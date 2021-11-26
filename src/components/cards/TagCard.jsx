@@ -4,7 +4,7 @@ import "./tagCard.css";
 
 const TagCard = ({ name }) => {
   return (
-    <Link to={`/genre/${name}`}>
+    <Link className="links" to={`/genre/${name}`}>
       <div className="card">
         <h4>{name}</h4>
       </div>
