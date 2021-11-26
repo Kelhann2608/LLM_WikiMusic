@@ -16,8 +16,6 @@ function App() {
           <Route path="/genre/:tag/artist/:artistName" element={<Artist />} />
         </Routes>
       </Router>
-
-      <h1>Elle, elle aime ! dans app</h1>
     </div>
   );
 }
