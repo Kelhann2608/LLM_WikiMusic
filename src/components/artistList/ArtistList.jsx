@@ -31,7 +31,7 @@ const ArtistList = () => {
 
   return (
     <div className="artistListContainer">
-      {loading ? <img class="vinyl" src={vinyl} height="300" width="300" /> : null}
+      {loading ? <div className="vinylContainer"><img class="vinyl" src={vinyl} height="300" width="300" /></div> : null}
       {topArtist &&
         topArtist.map((el, idx) => (
           <ArtistCard key={idx} name={el.name} tag={tag} />
