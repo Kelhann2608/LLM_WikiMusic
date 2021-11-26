@@ -4,18 +4,96 @@
     text-align: center;
   }
 
-  .tracks-list {
-    list-style: none;
-    color: white;
+  .tracks-div {
+    height: 100vh;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+    url("https://images.pexels.com/photos/3771842/pexels-photo-3771842.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260");
+    background-size: 100% 100%;
+    position: fixed;
+    top: -0.5vw;
+    right: 0;
+    width: 45vw;
+    padding: 0.5vw 0 0.5vw 0.5vw;
+    margin: 0.5vw 0 0.5vw 0.5vw;
   }
 
-  .tracks-list li {
-    margin: 5px 0;
+  .title-video-playing h3 {
+    display: inline-block;
+    text-align: left;
+    font-size: 1.5rem;
+  }
+
+  .title-video-playing {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .track-video {
+    margin: 2vh 2vw;
+  }
+
+  .video-clip-title {
+    height: 15vh;
+    margin: 10vh;
+    text-transform: uppercase;
+    font-size: 3rem;
+    font-weight: 900;
+  }
+  
+.video-list-div {
+  height: 30vh;
+  box-sizing: border-box;
+  padding: 0.5vw;
+}
+
+  .video-list {
+    list-style: none;
+    width: 100%;
+    height: 25vh;
+    align-content: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    overflow: auto;
+  }
+
+  .video-list li {
+    display: inline-block;
+    font-size: 1rem;
+    margin: 0.5vh;
+    cursor: pointer;
     transition: transform 0.3s;
   }
 
+  .video-list li:hover {
+    transform: scale(1.1);
+    font-weight: bold;
+  }
+
+  .album-details {
+    width: 45vw;
+    height: 40vh;
+  }
+
+  .album-details h1 {
+    padding: 1vw 0;
+  }
+
+  .tracks-list {
+    list-style: none;
+    color: white;
+    height: 7vw;
+    text-shadow: black 4px 4px 3px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: stretch;
+  }
+
   .tracks {
-    margin: 5px 0;
+    display: inline-block;
+    margin: 0.3vw 0.8vw;
     transition: transform 0.3s;
   }
 
