@@ -4,6 +4,47 @@ padding: 0;
 text-align: center;
 }
 
+.container-artist {
+  display: flex;
+  flex-direction: column;
+}
+
+.artistInfos {
+  display: inline;
+  flex-direction: column;
+  background-color: blueviolet;
+}
+
+.picture-img {
+  width: 35%;
+  float: left;
+  margin: 20px;
+}
+.artistInfos-infos {
+  padding: 45px
+}
+
+.name-artist {
+  font-size: 6rem;
+  margin-top: -50px;
+  margin-bottom: 20px;
+}
+.artistInfos-social {
+  display: flex;
+  justify-content: center;
+  margin: 15px;
+  margin-bottom: 40px;
+}
+
+.artistInfos-social img {
+  width: 2.5rem;
+}
+
+.bioParagraph {
+  margin: 15px;
+}
+
+
 .artist-container {
   display: flex;
   justify-content: center;
@@ -70,42 +111,4 @@ text-align: center;
   transform: scale(1.03);
   transition: transform 0.3s;
 }
-  .container-artist {
-    display: flex;
-    flex-direction: column;
-  }
-
-  .artistInfos {
-    display: inline;
-    flex-direction: column;
-    background-color: blueviolet;
-  }
-
-  .picture-img {
-    width: 35%;
-    float: left;
-    margin: 20px;
-  }
-  .artistInfos-infos {
-    padding: 45px
-  }
-
-  .name-artist {
-    font-size: 6rem;
-    margin-top: -50px;
-    margin-bottom: 20px;
-  }
-  .artistInfos-social {
-    display: flex;
-    justify-content: center;
-    margin: 15px;
-    margin-bottom: 40px;
-  }
-
-  .artistInfos-social img {
-    width: 2.5rem;
-  }
-
-  .bioParagraph {
-    margin: 15px;
-  }
+ 
