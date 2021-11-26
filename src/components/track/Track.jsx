@@ -28,7 +28,7 @@ const Track = ({albumSelected, artistName}) => {
           setAudio(res.data.data[0].preview);
         })
         .catch((err) => console.log(err));
-  }, [selectedTrack]);
+  }, [selectedTrack, artistName]);
 
         
     useEffect(() => {
