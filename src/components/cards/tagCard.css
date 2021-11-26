@@ -23,6 +23,10 @@
   cursor: pointer;
 }
 
+.links {
+  text-decoration: none;
+}
+
 @media screen and (max-width: 450px) {
   .card {
     background: linear-gradient(

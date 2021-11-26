@@ -18,8 +18,10 @@
 }
 
 .artist-card h4 {
+    width: 100%;
     background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
     padding: 2px;
+    border-radius: 0 0 10px 10px;
     
 }
 
@@ -30,4 +32,8 @@
 
 .artist-card img {
     width: 100%;
+}
+
+.links {
+    text-decoration: none;
 }
