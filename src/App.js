@@ -11,12 +11,11 @@ function App() {
   return (
     <div className="App">
       <Router>
-        <Header />
         <Routes>
           <Route exact path="/" element={<Welcome />} />
-          <Route path="/genres" element={<Home />} />
-          <Route path="/genre/:tag" element={<ArtistList />} />
-          <Route path="/genre/:tag/artist/:artistName" element={<Artist />} />
+          <Route path="/genres" element={<><Header /><Home /></>} />
+          <Route path="/genre/:tag" element={<><Header /><ArtistList /></>} />
+          <Route path="/genre/:tag/artist/:artistName" element={<><Header /><Artist /></>} />
         </Routes>
         <Footer />
       </Router>
