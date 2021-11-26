@@ -9,6 +9,11 @@
     flex-wrap: wrap;
   }
 
+  .cardsContainer img {
+    text-align: center;
+    display:block!important;
+  }
+
   @media screen and (max-width: 450px) {
     .cardsContainer {
       display: flex;
