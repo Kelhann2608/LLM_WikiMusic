@@ -1,7 +1,7 @@
 * {
-margin: 0;
-padding: 0;
-text-align: center;
+  margin: 0;
+  padding: 0;
+  text-align: center;
 }
 
 .artist-container {
@@ -48,7 +48,7 @@ text-align: center;
   margin: 15px;
 }
 
-.tracks-details {
+.tracks-details  {
   display: hidden;
   width: 0;
 }
@@ -65,12 +65,24 @@ text-align: center;
 }
 
 @keyframes opacity {
-  0%    { opacity: 0; }
-  20%   { opacity: 0.2; }
-  40%   { opacity: 0.4; }
-  60%   { opacity: 0.6; }
-  80%   { opacity: 0.8; }
-  100%  { opacity: 1; }
+  0% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 0.2;
+  }
+  40% {
+    opacity: 0.4;
+  }
+  60% {
+    opacity: 0.6;
+  }
+  80% {
+    opacity: 0.8;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 @keyframes appear {
@@ -150,28 +162,29 @@ text-align: center;
 
 @media screen and (max-width: 450px) {
   .album-details {
-    width: 100%!important;
+    width: 100% !important;
   }
 }
 
 @media screen and (min-width: 450px) and (max-width: 768px) {
- 
 }
 
 .next {
   padding: 10px 0;
   width: 8rem;
   font-size: 1.1rem;
-  margin: 5rem 1rem 5rem 1rem;
+  margin: 0 10vw 10vh 10vw;
   border-radius: 10px;
   background-color: white;
   color: black;
   font-weight: bold;
   border: black solid 2px;
   transition: transform 0.5s;
+}
+/* .prevNextContainer .next {
   position: absolute;
   bottom: 0;
-}
+} */
 
 .next:hover {
   background-color: black;
@@ -181,8 +194,14 @@ text-align: center;
 
 .next.left {
   left: 0;
+  position: absolute;
+  margin: 0 2vw 10vh 2vw;
+  bottom: 0;
 }
 
 .next.right {
   right: 0;
+  position: absolute;
+  margin: 0 2vw 10vh 2vw;
+  bottom: 0;
 }
