@@ -4,6 +4,7 @@ import axios from 'axios';
 import Lottie from "react-lottie";
 import animationAudioPlaying from "./animationAudioPlaying.json";
 import './track.css';
+import arrow from '../../assets/arrow.png';
 
 const Track = ({albumSelected, artistName}) => {
     const [tracksList, setTracksList] = useState();
@@ -37,7 +38,6 @@ const Track = ({albumSelected, artistName}) => {
             .then((res) => (res.data))
             .then((data) => setTracksList(data.track))
     }, [albumSelected, setTracksList]);
-    tracksList && console.log(tracksList);
 
     useEffect(() => {
         tracksList && axios
@@ -49,10 +49,10 @@ const Track = ({albumSelected, artistName}) => {
     return (
         <div className="tracks-div">
            <div className="video-div">
-               <div className={audioPlay ? "audio-play" : "title-video-playing"}>
+               <div className={audioPlay && audio ? "audio-play" : "title-video-playing"}>
                {videoUrl && !audioPlay ? (<ReactPlayer
                         className="track-video"
-                        url={videoUrl && videoUrl/*  : "https://youtu.be/nh7J0GdmM1M" */}
+                        url={videoUrl && videoUrl}
                         volume={1}
                         playing
                         loop
@@ -62,14 +62,18 @@ const Track = ({albumSelected, artistName}) => {
                     : audioPlay && audio ? (<><Lottie options={defaultOptions} width="14vw" height="14vw" />
                     <ReactPlayer
                         className="track-video"
-                        url={videoUrl && videoUrl/*  : "https://youtu.be/nh7J0GdmM1M" */}
+                        url={videoUrl && videoUrl}
                         volume={1}
                         playing
                         loop
                         width="25vw"
                         height="28vh"
                     /></>)
-                    : (<h1 className="video-clip-title">Video Clips</h1>)
+                    : (<div className="arrow-div">
+                        <h1 className="video-clip-title">Video Clips</h1>
+                        <h3 className="video-clip-title-h3">Jetez un oeil aux clips de {artistName}</h3>
+                        <img id="arrow" src={arrow} alt="" />
+                        </div>)
                     }
                 <h3>{videoPlaying && !audioPlay && videoPlaying}</h3>
                 </div>
