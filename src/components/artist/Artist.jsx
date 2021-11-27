@@ -21,7 +21,7 @@ const Artist = () => {
   useEffect(() => {
     axios
       .get(
-        `https://www.theaudiodb.com/api/v1/json/1/search.php?s=${artistName}`
+        `https://www.theaudiodb.com/api/v1/json/2/search.php?s=${artistName}`
       )
       .then((res) => res.data.artists[0])
       .then((data) => setArtist(data));
@@ -31,7 +31,7 @@ const Artist = () => {
     artist &&
       axios
         .get(
-          `https://theaudiodb.com/api/v1/json/1/album.php?i=${artist.idArtist}`
+          `https://theaudiodb.com/api/v1/json/2/album.php?i=${artist.idArtist}`
         )
         .then((res) => res.data)
         .then((data) => setAlbumList(data.album));

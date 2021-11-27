@@ -34,14 +34,14 @@ const Track = ({albumSelected, artistName}) => {
         
     useEffect(() => {
         albumSelected && axios
-            .get(`https://theaudiodb.com/api/v1/json/1/track.php?m=${albumSelected}`)
+            .get(`https://theaudiodb.com/api/v1/json/2/track.php?m=${albumSelected}`)
             .then((res) => (res.data))
             .then((data) => setTracksList(data.track))
     }, [albumSelected, setTracksList]);
 
     useEffect(() => {
         tracksList && axios
-            .get(`https://theaudiodb.com/api/v1/json/1/mvid.php?i=${tracksList[0].idArtist}`)
+            .get(`https://theaudiodb.com/api/v1/json/2/mvid.php?i=${tracksList[0].idArtist}`)
             .then((res) => res.data)
             .then((data) => setVideoList(data.mvids))
     }, [tracksList, setVideoList]);

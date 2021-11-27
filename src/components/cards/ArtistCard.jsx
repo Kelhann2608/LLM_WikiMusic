@@ -11,7 +11,7 @@ const ArtistCard = ({ name, tag }) => {
   useEffect(() => {
     name &&
       axios
-        .get(`https://theaudiodb.com/api/v1/json/1/search.php?s=${name}`)
+        .get(`https://theaudiodb.com/api/v1/json/2/search.php?s=${name}`)
         .then((res) => {
           setPicture(res.data.artists[0].strArtistBanner);
         })
