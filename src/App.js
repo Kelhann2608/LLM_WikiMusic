@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { HashRouter, Routes, Route } from "react-router-dom";
 import Header from "./components/header/Header";
 import Home from "./components/home/Home";
 import ArtistList from "./components/artistList/ArtistList";
@@ -10,7 +10,7 @@ import "./app.css";
 function App() {
   return (
     <div className="App">
-      <Router>
+      <HashRouter basename="/">
         <Routes>
           <Route exact path="/" element={<Welcome />} />
           <Route path="/genres" element={<><Header /><Home /></>} />
@@ -18,7 +18,7 @@ function App() {
           <Route path="/genre/:tag/artist/:artistName" element={<><Header /><Artist /></>} />
         </Routes>
         <Footer />
-      </Router>
+      </HashRouter>
     </div>
   );
 }
