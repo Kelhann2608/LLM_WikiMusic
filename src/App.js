@@ -10,7 +10,7 @@ import "./app.css";
 function App() {
   return (
     <div className="App">
-      <Router>
+      <Router basename="/LLM_WikiMusic/">
         <Routes>
           <Route exact path="/" element={<Welcome />} />
           <Route path="/genres" element={<><Header /><Home /></>} />
