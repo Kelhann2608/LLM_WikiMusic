@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/LLM_WikiMusic/static/css/main.603a557f.chunk.css",
-    "main.js": "/LLM_WikiMusic/static/js/main.4a90ee9e.chunk.js",
-    "main.js.map": "/LLM_WikiMusic/static/js/main.4a90ee9e.chunk.js.map",
+    "main.css": "/LLM_WikiMusic/static/css/main.82f106bf.chunk.css",
+    "main.js": "/LLM_WikiMusic/static/js/main.dd601711.chunk.js",
+    "main.js.map": "/LLM_WikiMusic/static/js/main.dd601711.chunk.js.map",
     "runtime-main.js": "/LLM_WikiMusic/static/js/runtime-main.6ace910b.js",
     "runtime-main.js.map": "/LLM_WikiMusic/static/js/runtime-main.6ace910b.js.map",
-    "static/js/2.2f4dfbae.chunk.js": "/LLM_WikiMusic/static/js/2.2f4dfbae.chunk.js",
-    "static/js/2.2f4dfbae.chunk.js.map": "/LLM_WikiMusic/static/js/2.2f4dfbae.chunk.js.map",
+    "static/js/2.2684f31a.chunk.js": "/LLM_WikiMusic/static/js/2.2684f31a.chunk.js",
+    "static/js/2.2684f31a.chunk.js.map": "/LLM_WikiMusic/static/js/2.2684f31a.chunk.js.map",
     "index.html": "/LLM_WikiMusic/index.html",
-    "static/css/main.603a557f.chunk.css.map": "/LLM_WikiMusic/static/css/main.603a557f.chunk.css.map",
-    "static/js/2.2f4dfbae.chunk.js.LICENSE.txt": "/LLM_WikiMusic/static/js/2.2f4dfbae.chunk.js.LICENSE.txt",
+    "static/css/main.82f106bf.chunk.css.map": "/LLM_WikiMusic/static/css/main.82f106bf.chunk.css.map",
+    "static/js/2.2684f31a.chunk.js.LICENSE.txt": "/LLM_WikiMusic/static/js/2.2684f31a.chunk.js.LICENSE.txt",
     "static/media/arrow.920ad8c7.png": "/LLM_WikiMusic/static/media/arrow.920ad8c7.png",
     "static/media/tagCard.css": "/LLM_WikiMusic/static/media/genreBg.dbc546a6.jpg",
     "static/media/logo-facebook.6789480e.png": "/LLM_WikiMusic/static/media/logo-facebook.6789480e.png",
@@ -23,8 +23,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.6ace910b.js",
-    "static/js/2.2f4dfbae.chunk.js",
-    "static/css/main.603a557f.chunk.css",
-    "static/js/main.4a90ee9e.chunk.js"
+    "static/js/2.2684f31a.chunk.js",
+    "static/css/main.82f106bf.chunk.css",
+    "static/js/main.dd601711.chunk.js"
   ]
 }
