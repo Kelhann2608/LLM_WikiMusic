@@ -19,7 +19,7 @@ const ArtistList = () => {
       () =>
         axios
           .get(
-            `http://ws.audioscrobbler.com/2.0/?method=tag.gettopartists&tag=${tag}&${apiKey}&format=json`
+            `https://ws.audioscrobbler.com/2.0/?method=tag.gettopartists&tag=${tag}&${apiKey}&format=json`
           )
           .then((res) => {
             setTopArtist(res.data.topartists.artist);
