@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/LLM_WikiMusic/static/css/main.9eb70ac2.chunk.css",
-    "main.js": "/LLM_WikiMusic/static/js/main.94d1fe94.chunk.js",
-    "main.js.map": "/LLM_WikiMusic/static/js/main.94d1fe94.chunk.js.map",
+    "main.js": "/LLM_WikiMusic/static/js/main.c3db5952.chunk.js",
+    "main.js.map": "/LLM_WikiMusic/static/js/main.c3db5952.chunk.js.map",
     "runtime-main.js": "/LLM_WikiMusic/static/js/runtime-main.6ace910b.js",
     "runtime-main.js.map": "/LLM_WikiMusic/static/js/runtime-main.6ace910b.js.map",
     "static/js/2.ae053018.chunk.js": "/LLM_WikiMusic/static/js/2.ae053018.chunk.js",
@@ -25,6 +25,6 @@
     "static/js/runtime-main.6ace910b.js",
     "static/js/2.ae053018.chunk.js",
     "static/css/main.9eb70ac2.chunk.css",
-    "static/js/main.94d1fe94.chunk.js"
+    "static/js/main.c3db5952.chunk.js"
   ]
 }
