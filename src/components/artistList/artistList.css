@@ -1,3 +1,7 @@
+.artistListContainer {
+  min-height: 73vh;
+}
+
 .vinyl {
     animation: vinylspin infinite 20s linear;
     position: absolute;
