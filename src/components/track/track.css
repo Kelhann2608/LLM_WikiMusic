@@ -121,12 +121,13 @@
   .tracks-list {
     list-style: none;
     color: white;
-    height: 7vw;
+    height: 11vw;
     text-shadow: black 4px 4px 3px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
     align-items: stretch;
+    overflow: auto;
   }
 
   .tracks {
