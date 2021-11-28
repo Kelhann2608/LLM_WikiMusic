@@ -9,6 +9,7 @@
   }
   .cardsContainer {
     width: 100vw;
+    min-height: 67.5vh;
     display: flex;
     flex-wrap: wrap;
   }

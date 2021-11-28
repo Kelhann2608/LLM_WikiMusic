@@ -59,15 +59,15 @@ const Track = ({albumSelected, artistName}) => {
                         width="25vw"
                         height="28vh"
                     />) 
-                    : audioPlay && audio ? (<><Lottie options={defaultOptions} width="14vw" height="14vw" />
+                    : audioPlay && audio ? (<><Lottie id="lottie-playing" options={defaultOptions} width="25vw" height="15vw" />
                     <ReactPlayer
                         className="track-video"
                         url={videoUrl && videoUrl}
                         volume={1}
                         playing
                         loop
-                        width="25vw"
-                        height="28vh"
+                        width="0"
+                        height="0"
                     /></>)
                     : (<div className="arrow-div">
                         <h1 className="video-clip-title">Video Clips</h1>
@@ -95,7 +95,7 @@ const Track = ({albumSelected, artistName}) => {
                         onClick={() =>
                             {setSelectedTrack(
                               track.strTrack.toLowerCase().split(" ").join("%20")
-                            ); setTimeout(()=> audio && setVideoUrl(audio), 500); setAudioPlay(true);}}
+                            ); setTimeout(()=>setVideoUrl(audio), 400); setAudioPlay(true);}}
                     >
                         {track.strTrack}
                     </li>)}

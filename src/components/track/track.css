@@ -38,6 +38,10 @@
     align-items: center;
   }
 
+  .audio-play :nth-child(1) {
+    margin-left: 2vw;
+  }
+
   .track-video {
     margin: 2vh 2vw;
   }
