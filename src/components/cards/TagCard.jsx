@@ -1,14 +1,14 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { HashLink } from 'react-router-hash-link';
 import "./tagCard.css";
 
 const TagCard = ({ name }) => {
   return (
-    <Link className="links" to={`/genre/${name}`}>
+    <HashLink className="links" to={`/genre/${name}`}>
       <div className="card">
         <h4>{name}</h4>
       </div>
-    </Link>
+    </HashLink>
   );
 };
 
