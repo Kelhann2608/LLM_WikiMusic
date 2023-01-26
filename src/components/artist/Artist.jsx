@@ -37,27 +37,30 @@ const Artist = () => {
         .then((data) => setAlbumList(data.album));
   }, [artist, setAlbumList]);
 
-  // console.log(artist.strFacebook)
-
   const handlePrevClick = () => {
-    if (firstNext > 0)
-    {
-          setFirstNext(firstNext - 10);
-    setSecondNext(secondNext - 10);
+    if (firstNext > 0) {
+      setFirstNext(firstNext - 10);
+      setSecondNext(secondNext - 10);
     }
-  }
+  };
 
   const handleNextClick = () => {
+ albumLength
+    if (secondNext < albumList.length - 10) {
+
     if (secondNext < albumList.length - 5) {
+ main
       setFirstNext(firstNext + 10);
       setSecondNext(secondNext + 10);
     }
-  }
+  };
 
   return (
     <div className="artist-container">
       {artist && (
-        <div className={isHidden ? "artist-details" : "artist-details-is-hidden"}>
+        <div
+          className={isHidden ? "artist-details" : "artist-details-is-hidden"}
+        >
           <div className="artistInfos">
             <div className="artistInfos-all">
               <img
@@ -73,7 +76,6 @@ const Artist = () => {
                 <div className="artistInfos-social">
                   {artist.strFacebook !== "" ? (
                     <div>
-                      {" "}
                       <a
                         href={
                           artist.strFacebook.includes("https://")
@@ -81,11 +83,14 @@ const Artist = () => {
                             : "https://" + artist.strFacebook
                         }
                         target="_blank"
+ albumLength
+                        without
+
+ main
                         rel="noreferrer"
                       >
-                        {" "}
                         <img src={logoFacebook} alt="logo facebook" />
-                      </a>{" "}
+                      </a>
                     </div>
                   ) : (
                     ""
@@ -99,9 +104,12 @@ const Artist = () => {
                             : "https://" + artist.strTwitter
                         }
                         target="_blank"
+ albumLength
+                        without
+
+ main
                         rel="noreferrer"
                       >
-                        {" "}
                         <img src={logoTwitter} alt="logo twitter" />
                       </a>
                     </div>
@@ -110,7 +118,6 @@ const Artist = () => {
                   )}
                   {artist.strWebsite !== "" ? (
                     <div>
-                      {" "}
                       <a
                         href={
                           artist.strWebsite.includes("https://")
@@ -118,9 +125,12 @@ const Artist = () => {
                             : "https://" + artist.strWebsite
                         }
                         target="_blank"
+ albumLength
+                        without
+
+ main
                         rel="noreferrer"
                       >
-                        {" "}
                         <img src={logoWebsite} alt="logo website" />
                       </a>
                     </div>
@@ -129,12 +139,12 @@ const Artist = () => {
                   )}
                 </div>
                 <div className="paragraph">
-                {bioParagraph &&
-                  bioParagraph.slice(0, 3).map((p, index) => (
-                    <p className="bioParagraph" key={index}>
-                      {p}
-                    </p>
-                  ))}
+                  {bioParagraph &&
+                    bioParagraph.slice(0, 3).map((p, index) => (
+                      <p className="bioParagraph" key={index}>
+                        {p}
+                      </p>
+                    ))}
                 </div>
               </div>
             </div>
@@ -161,6 +171,31 @@ const Artist = () => {
                     ></div>
                   </div>
                 ))}
+ albumLength
+            {albumList && albumSelected && (
+              <button
+                type="button"
+                className="next left"
+                onClick={() => {
+                  handlePrevClick();
+                }}
+              >
+                Previous 10
+              </button>
+            )}
+            {albumList && albumSelected && (
+              <button
+                type="button"
+                className="next right"
+                onClick={() => {
+                  handleNextClick();
+                }}
+              >
+                Next 10
+              </button>
+            )}
+          </div>
+
               {albumList && albumSelected && (
                 <button
                   type="button"
@@ -184,6 +219,7 @@ const Artist = () => {
                 </button>
               )}
             </div>
+ main
           <div>
             {albumList && !albumSelected && (
               <button
@@ -207,10 +243,13 @@ const Artist = () => {
                 Next 10
               </button>
             )}
+ albumLength
+
 
         
 
 
+ main
           </div>
           <h2 className="sectionTitle">Next events</h2>
           <Event />

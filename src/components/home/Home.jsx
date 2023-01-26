@@ -32,7 +32,11 @@ const Home = () => {
       <div className="inputSearch">
         {" "}
         <label>
+ albumLength
+          <img src={loupeSearch} alt="" width="18px" />
+
           <img src={loupeSearch} alt="" width="20px" />
+ main
         </label>
         <input
           className="searchInput"
@@ -44,7 +48,11 @@ const Home = () => {
       </div>
       {loading ? (
         <div className="vinylContainer">
+ albumLength
+          <img className="vinyl" alt="" src={vinyl} height="300" width="300" />
+
           <img className="vinyl" src={vinyl} alt="" height="300" width="300" />
+ main
         </div>
       ) : null}
       <div className="cardsContainer">
