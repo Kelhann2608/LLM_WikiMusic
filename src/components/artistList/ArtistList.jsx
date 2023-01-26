@@ -19,7 +19,7 @@ const ArtistList = () => {
       () =>
         axios
           .get(
-            `http://ws.audioscrobbler.com/2.0/?method=tag.gettopartists&tag=${tag}&${apiKey}&format=json`
+            `https://ws.audioscrobbler.com/2.0/?method=tag.gettopartists&tag=${tag}&${apiKey}&format=json`
           )
           .then((res) => {
             setTopArtist(res.data.topartists.artist);
@@ -32,11 +32,15 @@ const ArtistList = () => {
 
   return (
     <div className="artistListContainer">
+ albumLength
       <div className="inputSearch">
         {" "}
         <label>
           <img alt="" src={loupeSearch} width="18px" />
         </label>
+
+      <div className="inputSearch"> <label ><img alt="" src={loupeSearch} width="18px"/></label>
+ main
         <input
           className="searchInput"
           type="text"
@@ -49,7 +53,11 @@ const ArtistList = () => {
         <div className="vinylContainer">
           <img className="vinyl" alt="" src={vinyl} height="300" width="300" />
         </div>
+ albumLength
       ) : null}
+
+      {loading ? <div className="vinylContainer"><img className="vinyl" src={vinyl} alt="" height="300" width="300" /></div> : null}
+ main
       {topArtist &&
         topArtist
           .filter((artist) => artist.name.toLowerCase().includes(searchArtist))

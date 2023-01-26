@@ -12,14 +12,14 @@
     margin: 2vw;
     text-transform: uppercase;
     color: white;
-    text-shadow: 2px 2px 2px black;
+    text-shadow: 3px 3px 2px black;
     font-weight: bold;
     transition: transform 0.3s;
     font-size: 1.2rem;
     
 }
 
-.card:hover {
+.eventCard:hover {
     transform: scale(1.05);
     cursor: pointer;
 }

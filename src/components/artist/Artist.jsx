@@ -21,7 +21,7 @@ const Artist = () => {
   useEffect(() => {
     axios
       .get(
-        `https://www.theaudiodb.com/api/v1/json/1/search.php?s=${artistName}`
+        `https://www.theaudiodb.com/api/v1/json/2/search.php?s=${artistName}`
       )
       .then((res) => res.data.artists[0])
       .then((data) => setArtist(data));
@@ -31,7 +31,7 @@ const Artist = () => {
     artist &&
       axios
         .get(
-          `https://theaudiodb.com/api/v1/json/1/album.php?i=${artist.idArtist}`
+          `https://theaudiodb.com/api/v1/json/2/album.php?i=${artist.idArtist}`
         )
         .then((res) => res.data)
         .then((data) => setAlbumList(data.album));
@@ -45,7 +45,11 @@ const Artist = () => {
   };
 
   const handleNextClick = () => {
+ albumLength
     if (secondNext < albumList.length - 10) {
+
+    if (secondNext < albumList.length - 5) {
+ main
       setFirstNext(firstNext + 10);
       setSecondNext(secondNext + 10);
     }
@@ -79,7 +83,10 @@ const Artist = () => {
                             : "https://" + artist.strFacebook
                         }
                         target="_blank"
+ albumLength
                         without
+
+ main
                         rel="noreferrer"
                       >
                         <img src={logoFacebook} alt="logo facebook" />
@@ -97,7 +104,10 @@ const Artist = () => {
                             : "https://" + artist.strTwitter
                         }
                         target="_blank"
+ albumLength
                         without
+
+ main
                         rel="noreferrer"
                       >
                         <img src={logoTwitter} alt="logo twitter" />
@@ -115,7 +125,10 @@ const Artist = () => {
                             : "https://" + artist.strWebsite
                         }
                         target="_blank"
+ albumLength
                         without
+
+ main
                         rel="noreferrer"
                       >
                         <img src={logoWebsite} alt="logo website" />
@@ -158,6 +171,7 @@ const Artist = () => {
                     ></div>
                   </div>
                 ))}
+ albumLength
             {albumList && albumSelected && (
               <button
                 type="button"
@@ -181,6 +195,31 @@ const Artist = () => {
               </button>
             )}
           </div>
+
+              {albumList && albumSelected && (
+                <button
+                  type="button"
+                  className="next left"
+                  onClick={() => {
+                    handlePrevClick();
+                  }}
+                >
+                  Previous 10
+                </button>
+              )}
+              {albumList && albumSelected && (
+                <button
+                  type="button"
+                  className="next right"
+                  onClick={() => {
+                    handleNextClick();
+                  }}
+                >
+                  Next 10
+                </button>
+              )}
+            </div>
+ main
           <div>
             {albumList && !albumSelected && (
               <button
@@ -204,7 +243,15 @@ const Artist = () => {
                 Next 10
               </button>
             )}
+ albumLength
+
+
+        
+
+
+ main
           </div>
+          <h2 className="sectionTitle">Next events</h2>
           <Event />
         </div>
       )}

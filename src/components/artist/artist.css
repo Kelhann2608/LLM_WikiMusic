@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+
 * {
   margin: 0;
   padding: 0;
@@ -25,6 +27,7 @@
 .artistInfos-infos {
   padding: 45px;
   border-radius: 10px;
+  background: linear-gradient(0deg, rgba(61, 59, 59, 0.8), rgba(61, 59, 59, 0.8));
 }
 
 .name-artist {
@@ -32,6 +35,7 @@
   margin-top: -50px;
   margin-bottom: 20px;
   color: #ff751f;
+  font-family: 'Permanent Marker', cursive;
 }
 .artistInfos-social {
   display: flex;
@@ -118,6 +122,9 @@
 .sectionTitle {
   text-align: center;
   margin: 5vh;
+  font-size: 3rem;
+  font-family: 'Permanent Marker', cursive;
+  clear: both;
 }
 
 .albums {
@@ -131,7 +138,7 @@
 
 .albumContainer {
   width: 150px;
-  height: 180px;
+  height: 210px;
   margin: 10px;
   display: flex;
   flex-direction: column;
@@ -181,10 +188,13 @@
   border: black solid 2px;
   transition: transform 0.5s;
 }
+ albumLength
 /* .prevNextContainer .next {
   position: absolute;
   bottom: 0;
 } */
+
+ main
 
 .next:hover {
   background-color: black;
@@ -204,4 +214,8 @@
   position: absolute;
   margin: 0 2vw 10vh 2vw;
   bottom: 0;
+ albumLength
 }
+
+}
+ main

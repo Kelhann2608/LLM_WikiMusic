@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { HashLink } from 'react-router-hash-link';
 import "./artistCard.css";
 
 import { useEffect, useState } from "react";
@@ -11,7 +11,7 @@ const ArtistCard = ({ name, tag }) => {
   useEffect(() => {
     name &&
       axios
-        .get(`https://theaudiodb.com/api/v1/json/1/search.php?s=${name}`)
+        .get(`https://theaudiodb.com/api/v1/json/2/search.php?s=${name}`)
         .then((res) => {
           setPicture(res.data.artists[0].strArtistBanner);
         })
@@ -19,12 +19,12 @@ const ArtistCard = ({ name, tag }) => {
   }, [name]);
   if (picture) {
     return (
-      <Link className="links" to={`/genre/${tag}/artist/${name}`}>
+      <HashLink className="links" to={`/genre/${tag}/artist/${name}`}>
         <div className="artist-card">
           <img src={picture} alt="" />
           <h4>{name}</h4>
         </div>
-      </Link>
+      </HashLink>
     );
   }
 
